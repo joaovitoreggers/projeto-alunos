@@ -1,0 +1,20 @@
+CREATE TABLE member (
+                        id             UUID          DEFAULT RANDOM_UUID() PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        email VARCHAR(255) NOT NULL UNIQUE,
+                        description VARCHAR(500),
+                        birthday DATE,
+                        baptism_date DATE,
+                        street VARCHAR(255),
+                        city VARCHAR(100),
+                        state VARCHAR(100),
+                        zip_code VARCHAR(50),
+                        country VARCHAR(100),
+                        number VARCHAR(50),
+                        gender VARCHAR(20),
+                        martial_status VARCHAR(20),
+                        created_at TIMESTAMP,
+                        created_by UUID,
+                        updated_at TIMESTAMP,
+                        updated_by UUID
+);
